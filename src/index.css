@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* This is for element selector CSS */
+@layer base {
+  h1 {
+    @apply text-white bg-transparent bg-[#8566aa] p-[6px_0_2px_0] mb-[10px] shadow-[5px_5px_25px_-5px_rgba(0,0,0,0.3)];
+  }
+  input {
+    @apply text-center h-[30px] top-[10px] bg-transparent border-none text-[20px] font-medium w-[60%] border-b-[#8566aa] outline-none focus:outline-0;
+  }
+  button {
+    @apply min-h-[40px] w-[40px] rounded-[100%] border-transparent bg-[#8566aa] text-[#fff] text-[30px] border-none outline-none ml-[10px] shadow-[5px_5px_25px_-5px_rgba(0,0,0,0.3)];
+  }
+  button:hover {
+    @apply bg-[#20bf6b];
+  }
+  ol {
+    @apply mt-[30px];
+  }
+  ol li {
+    @apply pl-[0] text-left text-[20px] font-medium min-h-[40px] flex items-center text-[#8566aa] capitalize;
+  }
+}
+
+/* This is for class selector CSS */
+@layer components {
+  .main_div {
+    @apply h-screen w-screen bg-[#6983aa] flex flex-row justify-center items-center text-center;
+  }
+  .center_div {
+    @apply w-1/4 h-[80vh] bg-[#f4f4f4] shadow-[5px_5px_25px_-5px_rgba(0,0,0,0.5)] rounded-[15px];
+  }
+  .todo_style {
+    @apply flex flex-row justify-start items-center;
+  }
+  .todo_style .fa-times {
+    @apply w-[20px] h-[20px] flex justify-center items-center bg-[#8566aa] rounded-[50%] text-[aliceblue] shadow-[5px_5px_25px_-5px_rgba(0,0,0,0.3)];
+  }
+  .todo_style .fa-times:hover {
+    @apply bg-[crimson];
+  }
+  .todo_style .fa-times:hover .list_style {
+    @apply bg-[crimson];
+  }
+}
+
+@media (max-width: 768px) {
+  .center_div {
+    width: 55%;
+  }
+  .todo_style .fa-times {
+    margin: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    margin-left: 5px;
+    min-height: 40px;
+    width: 40px;
+    color: #fff;
+    font-size: 30px;
+  }
+}

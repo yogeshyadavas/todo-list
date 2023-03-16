@@ -1,6 +1,6 @@
 # Getting Started with Create React App and Tailwind CSS
 
-For live demo of project you can see here  [Todo List](https://)
+For live demo of project you can see here  [Todo List](https://todo-list-yogeshyadav.netlify.app)
 This Todo List project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Create Todo React App easily

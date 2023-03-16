@@ -28,29 +28,32 @@ const App = () => {
     <>
       <div className="main_div">
         <div className="center_div">
-          <br />
-          <h1> ToDo List </h1>
-          <br />
-          <input
-            type="text"
-            placeholder="Add a Items"
-            value={inputList}
-            onChange={itemEvent}
-          />
-          <button onClick={listOfItems}> + </button>
-
-          <ol>
-            {items.map((itemVal, index) => {
-              return (
-                <TodoList
-                  key={index}
-                  id={index}
-                  text={itemVal}
-                  onSelect={deleteItem}
-                />
-              );
-            })}
-          </ol>
+          <div>
+            <br />
+            <h1> ToDo List </h1>
+            <br />
+            <input
+              type="text"
+              placeholder="Add a Items"
+              value={inputList}
+              onChange={itemEvent}
+            />
+            <button onClick={listOfItems}> + </button>
+          </div>
+          <div className="overflow-auto h-[64vh]" >
+            <ol>
+              {items.map((itemVal, index) => {
+                return (
+                  <TodoList
+                    key={index}
+                    id={index}
+                    text={itemVal}
+                    onSelect={deleteItem}
+                  />
+                );
+              })}
+            </ol>
+          </div>
         </div>
       </div>
     </>
